@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Incio de sesión - System Solutions</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="styles/style-index.css">
+	<?php
+	include_once("php/process.php");
+	include_once("php/messages.php");
+	include_once("php/register.php");
+	// session_start();
+	?>
+</head>
+
+<body>
+	<!-- partial:index.partial.html -->
+	<div class="container right-panel-active">
+		<!-- Registrarse -->
+		<div class="container__form container--signup" id="form1">
+			<form action="#" class="form" method="POST">
+				<h2 class="form__title">Registrarse</h2>
+				<input type="text" placeholder="Usuario" class="input" name="signup-user" />
+				<input type="email" placeholder="Email" class="input" name="signup-email" />
+				<input type="password" placeholder="Contraseña" class="input" name="signup-pass" />
+				<button type="submit" class="btn" name="btn">Registrarse</button>
+			</form>
+
+		</div>
+
+		<!-- Iniciar sesión -->
+		<div class="container__form container--signin" id="form2">
+			<form action="" class="form" method="POST">
+				<h2 class="form__title">Iniciar sesión</h2>
+				<input type="email" placeholder="Email" class="input" name="loging-email" />
+				<input type="password" placeholder="Contraseña" class="input" />
+				<a href="#" class="link">¿Olvidaste tu contraseña?</a>
+				<button type="submit" class="btn" name="">Iniciar sesión</button>
+			</form>
+		</div>
+
+		<!-- Overlay -->
+		<div class="container__overlay">
+			<div class="overlay">
+				<div class="overlay__panel overlay--left">
+					<button class="btn" id="signIn">Iniciar sesión</button>
+				</div>
+				<div class="overlay__panel overlay--right">
+					<button class="btn" id="signUp">Registrarse</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- partial -->
+	<script src="./script/script.js"></script>
+
+</body>
+
+</html>
+
